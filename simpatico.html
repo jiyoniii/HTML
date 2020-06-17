@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simpatico</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        /* 배경색 */
+        body {
+            background-color: #FBEEC7;
+        }
+
+        /* 화면 wrap */
+        #wrap {
+            width: 970px;
+            margin: auto;
+        }
+
+        /* Your Website 문구 */
+        #head {
+            margin-left: 20px;
+        }
+
+        #headtext {
+            padding-top: 15px;
+            color: #3B8FE9;
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        #headtext:hover {
+            color: black;
+        }
+
+        #subtext {
+            font-size: 24px;
+            padding: 0;
+            font-weight: bold;
+        }
+
+        /* 메뉴 상단 이미지 추가 */
+        #header {
+            width: 970px;
+            height: 20px;
+            background-image: url('simpa/top.jpg');
+        }
+
+        /* 메뉴 */
+        #menu {
+            width: 930px;
+            height: 60px;
+            font-weight: bold;
+            background-image: url('simpa/menubg.jpg');
+            color: white;
+            margin-left: 20px;
+
+        }
+
+        #menu li {
+            display: inline-block;
+            font-size: 20px;
+            padding: 15px;
+        }
+
+        #menu li:hover {
+            color: black;
+        }
+
+        /* 메뉴아래 전체 콘텐츠 */
+        #content {
+
+            padding-top: 20px;
+            width: 970px;
+            height: 700px;
+            background-image: url('simpa/content.jpg');
+        }
+
+        /* 왼쪽 */
+        #left {
+            padding-top: 10px;
+            width: 20%;
+            height: 500px;
+            float: left;
+            padding-left: 20px;
+
+
+        }
+
+        #left .title {
+            line-height: 28px;
+            width: 90%;
+            height: 30px;
+            color: white;
+            font-weight: bold;
+            padding-left: 15px;
+            font-size: 15px;
+            margin-left: 0px;
+            background-image: url('simpa/contenth2.jpg');
+        }
+
+        #lefttop,
+        #leftbottom {
+            padding-left: 10px;
+            list-style: none;
+            font-size: 13px;
+            color: #2A84E5;
+            font-weight: bold;
+        }
+
+        #lefttop>li:hover {
+            color: black;
+        }
+
+        #leftbottom>li:hover {
+            color: black;
+        }
+
+        .archives {
+            margin-top: 15px;
+        }
+
+        /* 센터 */
+        #center {
+            padding-left: 10px;
+            padding-top: 10px;
+            width: 50%;
+            height: 500px;
+            float: left;
+            font-size: 13px;
+        }
+
+        #center .title {
+            width: 100%;
+            height: 30px;
+            line-height: 28px;
+            color: white;
+            font-weight: bold;
+            font-size: 15px;
+            background-image: url('simpa/contenth2.jpg');
+            padding-left: 15px;
+        }
+
+        #center .title:hover {
+            color: black;
+        }
+
+        #center #img {
+            width: 100%;
+        }
+
+        /* 본문 */
+        .article {
+            padding-top: 5px;
+        }
+
+        /* 오른쪽 */
+        #right {
+            padding-top: 10px;
+            padding-left: 30px;
+            width: 20%;
+            height: 500px;
+            float: left;
+
+        }
+
+        #right .title {
+            width: 100%;
+            height: 30px;
+            line-height: 28px;
+            color: white;
+            font-weight: bold;
+            padding-left: 15px;
+            font-size: 15px;
+            background-image: url('simpa/contenth2.jpg');
+        }
+
+        /* 하단부 */
+        #bottom {
+            width: 970px;
+            height: 20px;
+            background-image: url('simpa/bottom.jpg');
+        }
+
+        #footer {
+            width: 970px;
+            height: 30px;
+            font-size: 13px;
+            text-align: center;
+            color: grey;
+        }
+
+        span[target=black] {
+            color: #2A84E5;
+        }
+
+        span[target=black]:hover {
+            color: black;
+        }
+
+        span[target] {
+            font-weight: bold;
+        }
+
+        span[target=last]:hover {
+            color: black;
+        }
+
+        span[target=orange] {
+            color: orange;
+            font-size: 15px;
+        }
+
+        span[target=red] {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="head">
+            <span id="headtext">Your Website</span><br>
+            <span id="subtext" style="line-height: 0;">Super slogan for super site</span>
+        </div>
+        <div id="top">
+
+        </div>
+        <div id="header"></div>
+
+        <div id="content">
+            <div id="menu">
+                <li>HOME</li>
+                <li>ABOUT US</li>
+                <li>PHOTOS</li>
+                <li>BLOGS</li>
+                <li>CONTACT US</li>
+                <li>HELP</li>
+            </div>
+            <div id="left">
+                <div class="title">Categories : </div>
+                <div id="lefttop">
+                    <li>World Politics</li>
+                    <li>Europe Sport</li>
+                    <li>Networking</li>
+                    <li>Nature - Africa</li>
+                    <li>SuperCool</li>
+                    <li>Last Category</li>
+                </div>
+
+                <div class="title archives">Archives </div>
+                <div id="leftbottom">
+                    <li>January 2007</li>
+                    <li>February 2007</li>
+                    <li>March 2007</li>
+                    <li>April 2007</li>
+                    <li>May 2007</li>
+                    <li>June 2007</li>
+                    <li>July 2007</li>
+                    <li>August 2007</li>
+                    <li>September 2007</li>
+                    <li>October 2007</li>
+                    <li>November 2007</li>
+                    <li>December 2007</li>
+                </div>
+
+            </div>
+            <div id="center">
+                <p class="title">
+                    License and terms of use
+                </p>
+                <p class="article">
+                    Simpatico is a CSS template that is free and fully standards compliant. <span target="black">Free
+                        CSS
+                        templates</span> designed
+                    this template. This template is allowed for all uses, including commercial use, as it is released
+                    under the <span target>Creative Commons Attributions 2.5</span> license. The only stipulation to the
+                    use of
+                    this free
+                    template is that the links appearing in the footer remain intact. Beyond that, simply enjoy and have
+                    fun with it!
+                </p>
+                <br>
+                <p class="article">
+                    Donec nulla. Aenean eu augue ac nisl tincidunt rutrum. Proin erat justo, pharetra eget, posuere at,
+                    malesuada et, nulla. Donec pretium nibh sed est faucibus suscipit. Nunc nisi. Nullam vehicula. In
+                    ipsum lorem, bibendum sed, consectetuer et, gravida id, erat. Ut imperdiet, leo vel condimentum
+                    faucibus, risus justo feugiat purus, vitae congue nulla diam non urna.
+                </p>
+                <img id="img" src="simpa/pic.jpg" alt="pen" style="padding-top: 20px; padding-bottom: 15px;">
+                <p class="article">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec porta. Sed porttitor, tellus vitae
+                    tincidunt feugiat, sem sapien pellentesque justo, vitae pretium justo risus id nunc. Mauris elit
+                    metus, varius sit amet, rhoncus id, malesuada eget, tortor. Aenean eu augue ac nisl tincidunt
+                    rutrum. Proin erat justo, pharetra eget, posuere at, malesuada et, nulla.
+                </p>
+                <p class="article" style="margin-top: 15px;">
+                    Donec pretium nibh sed est faucibus suscipit. Nunc nisi. Nullam vehicula. In ipsum lorem, bibendum
+                    sed, consectetuer et, gravida id, erat. Ut imperdiet, leo vel condimentum faucibus, risus justo
+                    feugiat purus, vitae congue nulla diam non urna.
+                </p>
+            </div>
+            <div id="right">
+                <div class="title">
+                    Tag Cloud
+                </div>
+                <p style="font-size: 13px;">
+                    sit amet consectetuer elit Donec dui a metus non <span target="orange">rhoncus</span> in nec neque
+                    Sed suscipit magna vel
+                    venenatis vestibulum convallis erat et lobortis lectus nibh urna Maecenas libero Duis lorem
+                    tincidunt bibendum mi imperdiet enim nisl sem velit Fusce odio purus Integer elementum Pellentesque
+                    nulla eros ut diam Nullam lacus mollis quam luctus est <span target="red">accumsan</span> molestie
+                    nunc Aliquam dignissim
+                </p>
+            </div>
+        </div>
+        <div id="bottom"></div>
+        <div id="footer">Designed by <span target="last">Free CSS Templates,</span> Thanks to <span target="last">custom
+                web design</span></div>
+
+    </div>
+</body>
+
+</html>

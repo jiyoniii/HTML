@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 모바일 layout만들 때는 viewport가 꼭 들어가야 함 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            background: 0;
+        }
+
+        /* 모바일에서는 가로사이즈를 %로 조절하는게 일반적 */
+        header {
+            width: 100%;
+            height: 50px;
+            background-image: url(img/bg.png);
+            /* height랑 똑같이 50px로 줘야 중앙 높이로 옴. */
+            line-height: 50px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+        }
+
+        nav {
+            width: 100%;
+            position: fixed;
+            top: 50px;
+        }
+
+        nav div {
+            width: 25%;
+            height: 30px;
+            float: left;
+            text-align: center;
+            background-color: darkred;
+            border-right: 1px solid black;
+            /* box-sizing 쓰지 않으면 border 사이즈 때문에 아래로 내려감 */
+            box-sizing: border-box;
+        }
+
+        /* menu, btn을 absolute로 잡고 버튼위치 조정 */
+        #menu {
+            position: absolute;
+            left: 2px;
+            top: 10px;
+        }
+
+        #btn {
+            position: absolute;
+            right: 2px;
+            top: 10px;
+        }
+
+        /* footer의 위치를 고정시키기 위해 position:fixed 사용 */
+        /* 스크롤이 움직여도 footer는 고정되어있음 */
+        footer {
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            background-color: grey;
+            text-align: center;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="menu">
+            <img src="img/menu.png" alt="menu">
+        </div>
+        <h3>TIS. Edu</h3>
+        <div id="btn">
+            <img src="img/btn.png" alt="button">
+        </div>
+    </header>
+    <nav>
+        <div>교육센터소개</div>
+        <div>교육센터연혁</div>
+        <div>교육과정</div>
+        <!-- 오른쪽 태그 없애는 방법. border-right:none; -->
+        <div style="border-right: none;">ContactUs</div>
+    </nav>
+    <section>
+        <article>
+            <h1>TIS교육센터소개</h1>
+        </article>
+    </section>
+    <footer>
+        <h3>&copy;TIS.Edu All rights reserved.</h3>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영화소개</title>
+    <!-- 아래세줄 넣어야 jquery mobile 사용가능 -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <!-- 모바일 웹페이지 만들기 위한 jquery -->
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- 파이차트------------------------------------------------------------------------->
+    <!-- 위의 한줄은 구글 차트를 사용하기 위한 한 줄 -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+            var data = google.visualization.arrayToDataTable([
+                ['점수', '평점'],
+                ['10대', 9.47],
+                ['20대', 9.27],
+                ['30대', 8.88],
+                ['40대', 8.58],
+                ['50대', 8.82]
+            ]);
+
+            var options = {
+                is3D: true
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+            chart.draw(data, options);
+        }
+    </script>
+    <style>
+        /* 상단 버튼 효과" 평론가 평점, 네티즌 평점" */
+        .ui-btn-active {
+            background-color: #E9E9E9 !important;
+            color: black !important;
+            text-shadow: none !important;
+            border: none !important;
+        }
+
+        /* footer */
+        .footer {
+            background-color: #E9E9E9 !important;
+            text-shadow: none !important;
+            color: white !important;
+        }
+
+        .fas,
+        .far {
+            color: red;
+        }
+
+        ul {
+            margin-left: 0px;
+            list-style: none;
+        }
+
+        li {
+            margin-bottom: 20px !important;
+        }
+    </style>
+</head>
+<!--평론가 평점화면-->
+
+<body>
+    <div data-role="page">
+        <div data-role="header">
+            <a href="index.html" rel="external" class="ui-btn  ui-corner-all ui-icon-home ui-btn-icon-notext">notext</a>
+            <h3>영화 평점</h3>
+        </div>
+        <!-- navbar --------------------------------------->
+        <div data-role="navbar">
+            <ul>
+                <!-- active는 현재 버튼 눌렀을 때의 효과. -->
+                <li><a href="review.html" rel="external">평론가 평점</a></li>
+                <li><a href="review02.html" rel="external" class="ui-btn-active">네티즌 평점</a></li>
+            </ul>
+        </div>
+        <!-- /navbar -->
+
+
+        <div data-role="content">
+            <h3>네티즌 평점 8.94 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i><i class="far fa-star"></i></h3>
+            <div class="ui-body">
+                <p>
+                    <!-- pichart는 google chart에서 소스 복사 -->
+                    <div id="piechart" style="width: 100%; height: 300px;"></div>
+                </p>
+                 
+            </div>
+            <div>
+                <ul>
+                    <li>
+                        <div>
+                            <span style="font-weight: 700;">10 </span><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i>
+                        </div>
+                        <div>
+                            올해 본 영화 중에 최고였다 끝나고나서위 여운이 너무 강렬해 울음이 멈추지 않는다
+                        </div>
+                        <div>
+                            와우(hw61****) 2017.12.07
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <span style="font-weight: 700;">10 </span><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i>
+                        </div>
+                        <div>
+                            살면서 느낄 수 있는 모든 감정들을 꺼내보고, 곱씹어 보게 하는 그런 영화...여운도 너무 남고... 다시 보면 영화가 완전히 다르게 느껴질 듯
+                        </div>
+                        <div>
+                            라키(qcis****) 2017.12.07
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <span style="font-weight: 700;">10 </span><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i>
+                        </div>
+                        <div>
+                            이런 영화를 만날수 있었던 건 행운입니다.슬프다기보단 마음이 벅차올라서 눈물이 나더군요.제 주변에도 몇분이 훌쩍훌쩍.. 긴말 안할께요 꼭보세요
+                        </div>
+                        <div>
+                            눈부시다(mr_p****) 2017.12.07
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="footer">
+            <h3>&copy;JY All right reserved.</h3>
+        </div>
+    </div>
+</body>
+
+</html>

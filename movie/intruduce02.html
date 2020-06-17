@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영화소개</title>
+    <!-- 아래세줄 넣어야 jquery mobile 사용가능 -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <!-- 모바일 웹페이지 만들기 위한 jquery -->
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <style>
+        /* 상단 버튼 효과"영화줄거리,등장인물,영화평점" */
+        .ui-btn-active {
+            background-color: #E9E9E9 !important;
+            color: black !important;
+            text-shadow: none !important;
+            border: none !important;
+        }
+
+        /* 1번 2번 등장인물 사진, 글 */
+        .ui-grid-a {
+            font-size: 12px;
+        }
+
+        .ui-grid-a img {
+            margin-right: 10px;
+        }
+
+        .actor {
+            color: blue;
+            font-weight: 700;
+        }
+
+        .ui-grid-a img {
+            float: left;
+        }
+
+        .ui-grid-a span {
+            color: red;
+
+        }
+
+        .ui-grid-a {
+            margin-bottom: 20px;
+        }
+
+        /* footer */
+        .footer {
+            background-color: #ACACAC !important;
+            text-shadow: none !important;
+            color: white !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div data-role="page">
+        <div data-role="header">
+            <a href="index.html" rel="external"
+                class="ui-btn ui-shadow ui-corner-all ui-icon-home ui-btn-icon-notext">notext</a>
+            <h3>영화 소개</h3>
+        </div>
+        <!-- navbar --------------------------------------->
+        <div data-role="navbar">
+            <ul>
+                <!-- active는 현재 버튼 눌렀을 때의 효과. -->
+                <!-- 페이지에 맞는 버튼으로 active class를 이동시켜줘야 함. -->
+                <li><a href="intruduce01.html" rel="external">영화줄거리</a></li>
+                <li><a href="intruduce02.html" rel="external" class="ui-btn-active">등장인물</a></li>
+                <!-- <li><a href="intruduce03.html" rel="external">영화평점</a></li> -->
+            </ul>
+        </div>
+        <!-- /navbar -->
+
+        <!-- 등장인물---------------------------------------------------->
+        <div data-role="content">
+            <h3>등장인물</h3>
+            <!-- grid로 블럭 나누기 -------------------------------------->
+            <!-- 등장인물 첫번째 단락-------------------------------------->
+            <div class="ui-grid-a">
+                <div class="ui-block-a">
+                    <img src="img/img01.jfif" alt="">
+                    <p class="actor">주동우</p>
+                    Zhou Dongyu<br>
+                    <span>주연</span> | 안생 역
+                    <p>
+                        베터 데이즈,2019<br>
+                        먼 훗날 우리,2018
+                    </p>
+                </div>
+
+                <div class="ui-block-b">
+                    <img src="img/img02.jfif" alt="">
+                    <p class="actor">마사순</p>
+                    Ma Si Chun<br>
+                    <span>주연</span> | 칠월 역
+                    <p>
+                        적인걸 3: 사대천왕,2018<br>
+                        안녕, 나의 소울메이트,2017
+                    </p>
+
+                </div>
+            </div>
+            <!-- 등장인물 두번째 단락 -->
+            <div class="ui-grid-a">
+                <div class="ui-block-a">
+                    <img src="img/img03.jfif" alt="">
+                    <p class="actor">이정빈</p>
+                    Toby Lee<br>
+                    <span>주연</span> | 가명 역
+                    <p>
+                        안녕, 나의 소울메이트,2017
+                    </p>
+                </div>
+            </div>
+            <!-- /grid-a -->
+        </div>
+        <div data-role="footer">
+            <h3>&copy;JY All right reserved.</h3>
+        </div>
+    </div>
+</body>
+
+</html>

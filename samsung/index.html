@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JY_SAMSUNG</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- fontawesome ------------------------------------------------>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- nav 자연스럽게 내려가게 하는 -->
+    <script>
+        $(document).ready(function () {
+            // Add smooth scrolling to all links in navbar + footer link
+            $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 900, function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        })
+        $('.nav a').on('click', function () {
+            var width = $(window).width();
+            if (width <= 768) {
+
+                $('.navbar-toggler').click();
+            }
+        }
+        );
+
+        // 제품소개 hover
+        $(document).ready(function () {
+            $('#cdimg1').hover(function () {
+                $(this).attr({ src: "img/goods01_hover.webp" });
+            }, function () {
+                $(this).attr({ src: "img/goods01.webp" });
+            });
+            $('#cdimg2').hover(function () {
+                $(this).attr({ src: "img/goods02_hover.webp" });
+            }, function () {
+                $(this).attr({ src: "img/goods02.webp" });
+            });
+            $('#cdimg3').hover(function () {
+                $(this).attr({ src: "img/goods03_hover.webp" });
+            }, function () {
+                $(this).attr({ src: "img/goods03.webp" });
+            });
+            $('#cdimg5').hover(function () {
+                $(this).attr({ src: "img/goods05_hover.webp" });
+            }, function () {
+                $(this).attr({ src: "img/goods05.webp" });
+            });
+            $('#cdimg6').hover(function () {
+                $(this).attr({ src: "img/goods06_hover.webp" });
+            }, function () {
+                $(this).attr({ src: "img/goods06.webp" });
+            });
+        });
+
+    </script>
+    <!-- 게시판 높이 셋팅 ------------------------------------------------------------------>
+    <script type="text/javascript">
+        // iframe resize
+        function autoResize(i) {
+            (i).height = 0;
+            var iframeHeight =
+                (i).contentWindow.document.body.scrollHeight;
+            (i).height = iframeHeight + 20;
+        }
+
+
+    </script>
+
+    <style>
+        .nav-link {
+            color: black !important;
+        }
+
+        #slider2 .carousel-indicators {
+            position: absolute;
+            top: 50px;
+        }
+
+        #goods .nav-item {
+            font-weight: 700;
+        }
+
+        #slider2 .carousel-indicators>li,
+        #slider2 .carousel-indicators>li.active {
+            font-size: 12px;
+            width: 150px;
+            height: 25px;
+            color: rgb(173, 173, 173);
+            background: rgba(255, 255, 255, 0);
+            /* text-indent >>text를 보이게 하는 효과 */
+            text-indent: 0;
+        }
+
+        /* 상단 캐러셀 pc,mobile별 화면조정 */
+        #vid01_pc,
+        #img01_pc,
+        #vid02_pc {
+            display: block;
+        }
+
+        #vid01_mo,
+        #img01_mo,
+        #vid02_mo {
+            display: none;
+        }
+
+        /* 상단 캐러셀 caption text위치조정 */
+        #box1 .carousel-caption {
+            position: absolute;
+            text-align: left;
+            left: 300px;
+            top: 300px
+        }
+
+        #box1 .carousel-caption .line1 {
+            font-weight: bold;
+            font-size: 60px;
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+
+        }
+
+        #box1 .carousel-caption .line2 {
+            margin-top: 20px !important;
+            margin-bottom: 0 !important;
+
+        }
+
+
+        #tvbutton {
+            border-radius: 12px;
+            text-decoration: none;
+            background-color: white;
+        }
+
+        #tvbutton a {
+            color: black;
+            font-size: 13px;
+            font-weight: 700;
+            background-color: white;
+            border: none;
+            outline: none;
+        }
+
+        #box2 .carousel-caption {
+            position: absolute;
+            text-align: left;
+            left: 300px;
+            top: 300px;
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        #box3 .carousel-caption {
+            position: absolute;
+            text-align: left;
+            left: 300px;
+            top: 300px
+        }
+
+
+
+
+        /* 두번째 캐러셀 pc,mobile별 화면조정 */
+        #slider01_pc,
+        #slider02_pc,
+        #slider03_pc,
+        #slider04_pc {
+            display: block;
+        }
+
+        #slider01_mo,
+        #slider02_mo,
+        #slider03_mo,
+        #slider04_mo {
+            display: none;
+        }
+
+        #story-pc {
+            display: block;
+        }
+
+        #story-mo {
+            display: none;
+        }
+
+        .sub {
+            display: block;
+        }
+
+        #subMenuMo {
+            display: none;
+        }
+
+
+        @media screen and (max-width: 768px) {
+
+            #vid01_pc,
+            #img01_pc,
+            #vid02_pc {
+                display: none;
+            }
+
+            #vid01_mo,
+            #img01_mo,
+            #vid02_mo {
+                display: block;
+            }
+
+            #slider01_pc,
+            #slider02_pc,
+            #slider03_pc,
+            #slider04_pc {
+                display: none;
+            }
+
+            #slider01_mo,
+            #slider02_mo,
+            #slider03_mo,
+            #slider04_mo {
+                display: block;
+            }
+
+            #slider2 .carousel-indicators>li,
+            #slider2 .carousel-indicators>li.active {
+                font-size: 10px;
+                width: 150px;
+                height: 25px;
+                color: rgb(173, 173, 173);
+                background: rgba(255, 255, 255, 0);
+                /* text-indent >>text를 보이게 하는 효과 */
+                text-indent: 0;
+            }
+
+
+            /* 상단 캐러셀 text위치조정 */
+            #box1 .carousel-caption {
+                position: absolute;
+                left: 80px;
+                top: 140px
+            }
+
+            #box1 .carousel-caption .line1 {
+                font-size: 30px !important;
+                margin-bottom: 0;
+            }
+
+            #box1 .carousel-caption .line2 {
+                font-size: 13px !important;
+            }
+
+            #box2 .carousel-caption {
+                position: absolute;
+                left: 80px;
+                top: 140px;
+                font-size: 30px;
+            }
+
+            #box3 .carousel-caption {
+                position: absolute;
+                left: 80px;
+                top: 140px;
+            }
+
+            #box3 .carousel-caption .line1 {
+                font-size: 30px !important;
+                margin-bottom: 0;
+            }
+
+            #box3 .carousel-caption .line2 {
+                font-size: 13px !important;
+
+            }
+
+            #story-pc {
+                display: none;
+            }
+
+            #story-mo {
+                display: block;
+            }
+
+            .sub {
+                display: none;
+            }
+
+            #subMenuMo {
+                display: block;
+                border: white;
+            }
+
+        }
+
+        /* 추천제품 배경색 변경 */
+        .card {
+            background-color: #F4F4F4;
+            border: none;
+        }
+
+        .row {
+            margin-bottom: 30px !important;
+        }
+
+        .sub {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-top: solid rgb(226, 226, 226) 0.5px;
+            border-bottom: solidrgb(226, 226, 226) 0.5px;
+        }
+
+        .footer {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-top: solid rgb(226, 226, 226) 0.5px;
+        }
+
+        #story-pc {
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+
+        ol {
+            border-top: solid 0.5pxrgb(226, 226, 226);
+            font-size: 15px;
+            margin-bottom: 30px;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        .submenu {
+            margin-top: 30px;
+            margin-left: 40px;
+            margin-bottom: 10px;
+        }
+
+        #color li a {
+            color: black !important;
+        }
+
+        .subline {
+            border-left: solid 0.5px rgb(226, 226, 226);
+        }
+    </style>
+
+</head>
+
+<body id="mypage">
+    <!-- navbar------------------------------------------------------>
+    <div class="container">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-md navbar-light">
+                <!-- Brand -->
+                <a class=" navbar-brand" href="#myPage" data-toggle="collapse" data-target=".navbar-collapse.in">
+                    <img src="img/logo.jpg" alt="samsung"></a>
+                <!-- 메뉴버튼 -------------------------------------------->
+                <!-- Toggler/collapsibe Button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navbar links -->
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show"
+                                href="#goods">제품소개</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show"
+                                href="#mobile">모바일&IT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show"
+                                href="#story">스토리</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show"
+                                href="#map">매장위치</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show"
+                                href="#board">BOARD</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- nav bar -->
+
+    <!-- 캐러셀 ------------------------------------------------------------->
+    <div id="slider" class="carousel slide" data-ride="carousel">
+
+        <!-- Indicators -->
+
+        <ul class="carousel-indicators">
+            <li data-target="#slider" data-slide-to="0" class="active"></li>
+            <li data-target="#slider" data-slide-to="1"></li>
+            <li data-target="#slider" data-slide-to="2"></li>
+        </ul>
+
+        <!-- The slideshow --------------------------------------------->
+        <!-- 첫번째 화면 ------------------------------------------------->
+        <div class="carousel-inner">
+            <!-- box1을 부모로 설정 캐러샐 자식 -------------------------------------->
+            <div id="box1" class="carousel-item active">
+                <video id="vid01_pc" muted autoplay loop width="100%" height="816">
+                    <source
+                        src="https://images.samsung.com/is/content/samsung/p5/sec/home/2020/p6/kv/0428/0428_BESPOKE_video_PC_1920_810.mp4"
+                        type="video/mp4">
+                </video>
+                <video id="vid01_mo" muted autoplay loop width="100%" height="816">
+                    <source
+                        src="https://images.samsung.com/is/content/samsung/p5/sec/home/2020/p6/kv/0424/0424_BESPOKE_video_MO_1920_810_v3.mp4"
+                        type="video/mp4">
+                </video>
+                <div class="carousel-caption">
+                    <span class=line1>2020 NEW</span><br>
+                    <span class=line1>BESPOKE 런칭</span>
+                    <p class=line2>새로운 컬러 업그레이드된 스펙 <br>
+                        BESPOKE 신제품을 지금 만나보세요
+                    </p>
+
+                </div>
+            </div>
+            <!-- 첫번째 화면 -->
+            <!-- 두번째 화면 --------------------------------------------------->
+
+            <div id="box2" class="carousel-item">
+                <img id="img01_pc" src="img/pic1.webp" width="100%" height="816" alt="Los Angeles">
+                <img id="img01_mo" src="img/pic3.webp" width="100%" height="816" alt="Los Angeles">
+                <div class="carousel-caption">
+                    <p style="margin-bottom: 0px;">GALAXY S20</p>
+                    <p style="margin-bottom: 0px;">S20+ | S20</p>
+                    <p style="margin-bottom: 0px;">Ultra 5G</p>
+                </div>
+
+            </div>
+
+            <!-- 두번째 화면 -->
+            <!-- 세번째 화면 --------------------------------------------------->
+            <div id="box3" class="carousel-item">
+                <video id="vid02_pc"
+                    src="https://images.samsung.com/is/content/samsung/p5/sec/home/2020/p6/kv/0403/home_kv_02_pc_1920x810.mp4"
+                    loop autoplay muted width="100%" height="816">
+                </video>
+
+                <video id="vid02_mo"
+                    src="https://images.samsung.com/is/content/samsung/p5/sec/home/2020/p6/kv/0403/home_kv_02_mo_720x1480.mp4"
+                    loop autoplay muted width="100%" height="816">
+                </video>
+
+                <div class="carousel-caption">
+                    <p class=line1 style="font-weight: bold; font-size: 70px;">2020 QLED 8K</p>
+                    <p class=line2>삼성닷컴만의 압도적인 혜택을 공개합니다.</p>
+                    <button id=tvbutton><a href="#">구매혜택보기</a></button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Left and right controls -->
+
+        <a class="carousel-control-prev" href="#slider" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#slider" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+    <!-- 캐러셀 -->
+
+    <!-- 제품소개 ------------------------------------------------------>
+    <div id="goods" class="container">
+        <!-- 상단 탭 Aligned Nav ---------------------------------------------->
+        <ul class="nav justify-content-center" style="margin-top: 80px; margin-bottom: 20px;">
+            <li class="nav-item"><a class="nav-link active" href="#">
+                    으뜸효율가전</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">
+                    새로운 갤럭시</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">
+                    우리집 맑음샵</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">
+                    특별한 혜택</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">
+                    추천 제품</a></li>
+        </ul>
+        <!-- 상단 탭 -->
+
+        <!-- Grid 1 ------------------------------------------------------>
+        <div class="row text-center">
+            <!-- 화면이 모바일로 줄어들게 되면 보여지는 img는 grid로 조절해서 사용 -->
+            <div class="col-md-3 col-sm-6 col-6">
+                <div class="card" style="width:100%">
+                    <!-- 버튼 대신 이미지or텍스트선택 시 modal화면 띄우게 변경 -->
+                    <img id="cdimg1" class="card-img-top" type="button" data-toggle="modal" data-target="#myModal"
+                        src="img/goods01.webp" alt="Card image">
+                    <div class="card-body" type="button" data-toggle="modal" data-target="#myModal">
+                        <h6 class="card-title">김치플러스 뚜껑형 202L</h6>
+                        <!-- Modal ----------------------------------------------------->
+                        <div class="modal" id="myModal">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">김치플러스 뚜껑형202L</h4>
+                                        <!-- &times;는 X버튼 -->
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+
+                                    <!-- Modal body -->
+                                    <div class="modal-body text-center">
+                                        <h3 style="padding-top: 35px;">한겨울 땅속 같은 아삭한 김치맛</h3>
+                                        <h3>메탈쿨링</h3>
+                                        냉기 보존에 탁월한 메탈쿨링으로 초정온 기술(±0.3 ℃ 온도 편차)을 적용하여<br>
+                                        한겨울 땅 속 같은 아삭한 김치 맛을 오래오래 지켜드립니다.
+                                        <img src="img/goods09.webp" width="100%" alt="good09" style="margin-top: 40px;">
+
+                                        <h3 style="padding-top: 35px;">맞춤 김치 보관 모드</h3>
+                                        자칫 얼거나, 빨리 시어지기 쉬운 저염김치, 집에서 담근 김치와 다르게 보관해야 되는 구입김치 등<br>
+                                        맞춤 보관 기술로 김치를 아삭하고 맛있게 유지해줍니다.
+                                        <img src="img/goods10.webp" width="100%" alt="goods10" style="margin-top:40px;">
+
+                                    </div>
+
+                                    <!-- Modal footer -->
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal -->
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-6">
+                <div class="card" style="width:100%">
+                    <img id="cdimg2" class="card-img-top" type="button" data-toggle="modal" data-target="#myModal"
+                        src="img/goods02.webp" alt="Card image">
+                    <div class="card-body">
+                        <h6 class="card-title">냉장고 615L RefinedInox</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-6">
+                <div class="card" style="width:100%">
+                    <img id="cdimg3" class="card-img-top" type="button" src="img/goods03.webp" alt="Card image">
+                    <div class="card-body">
+                        <h6 class="card-title">BESPOKE 냉장고 4도어</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-6">
+                <div id="cdimg4" class="card" style="width:100%">
+                    <img class="card-img-top" type="button" src="img/goods04.webp" alt="Card image">
+                    <div class="card-body">
+                        <h6 class="card-title">무풍에어컨 무풍갤러리 청정</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Grid1 -->
+        <!-- Grid2 ------------------------------------------------------>
+        <div class="row text-center">
+            <div class="col-md-3 col-sm-6 col-6">
+                <div class="card" style="width:100%">
+                    <img id="cdimg5" class="card-img-top" type="button" src="img/goods05.webp" alt="Card image">
+                    <div class="card-body">
+                        <h6 class="card-title">그랑데 세탁기 AI 23kg<br>그레이지</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-6">
+                <div class="card" style="width:100%">
+                    <img id="cdimg6" class="card-img-top" type="button" src="img/goods06.webp" alt="Card image">
+                    <div class="card-body">
+                        <h6 class="card-title">그랑데 세탁기 AI 23kg<br>블랙 케비어</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-6">
+                <div class="card" style="width:100%; height: 100%;">
+                    <img id="cdimg7" class="card-img-top" type="button" src="img/goods07.webp" alt="Card image">
+                    <div class="card-body">
+                        <h6 class="card-title">Crystal UHD 163cm 벽걸이형</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-6">
+                <div class="card" style="width:100%; height:100%;">
+                    <img id="cdimg8" class="card-img-top" type="button" src="img/goods08.webp" alt="Card image">
+                    <div class="card-body">
+                        <h6 class="card-title">무풍에어컨 무풍갤러리 청정</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Grid2 -->
+    </div>
+    <!-- 제품소개 -->
+
+    <!-- 모바일&IT (캐러셀) ------------------------------------------------------------>
+    <div id="mobile" class="container">
+        <div id="slider2" class="carousel slide" data-ride="carousel">
+            <!-- Indicators ---------------------------------------------------------->
+            <h3 class="text-center">모바일&IT</h3>
+            <ul class="carousel-indicators">
+                <li data-target="#slider2" data-slide-to="0" class="active">갤럭시 북 flex α</li>
+                <li data-target="#slider2" data-slide-to="1">갤럭시버즈+</li>
+                <li data-target="#slider2" data-slide-to="2">살롱데포토그라프</li>
+                <li data-target="#slider2" data-slide-to="3">갤럭시스튜디오</li>
+            </ul>
+
+            <!-- The slideshow --------------------------------------------->
+            <!-- 첫번째 화면 ------------------------------------------------->
+            <div class="carousel-inner">
+                <!-- cbox2을 부모로 설정 캐러샐은 자식 -------------------------------------->
+                <div id="cbox2" class="carousel-item active">
+                    <img id="slider01_pc" src="img/slider2_1_pc.webp" width="100%" height="auto" alt="">
+                    <img id="slider01_mo" src="img/slider2_1_mo.webp" width="100%" height="816" alt="">
+                    <div class="carousel-caption bounceInUp animated">
+                        <h3 style="color: black !important;">갤럭시 북 Flex α 사전판매 알림신청</h3>
+                        <p style="color: black;">삼성닷컴에서 가장 먼저 만나보세요!</p>
+                    </div>
+                </div>
+                <!-- 첫번째 화면 -->
+
+                <!-- 두번째 화면 --------------------------------------------------->
+                <div class="carousel-item ">
+                    <div>
+                        <img id="slider02_pc" src="img/slider2_2_pc.webp" width="100%" height="auto" alt=" ">
+                        <img id="slider02_mo" src="img/slider2_2_mo.webp" width="100%" height="816" alt=" ">
+                    </div>
+
+                </div>
+                <!-- 두번째 화면 -->
+                <!-- 세번째 화면 ------------------------------------------------->
+                <div class="carousel-item">
+                    <img id="slider03_pc" src="img/slider2_3_pc.webp" width="100%" height="auto" alt=" ">
+                    <img id="slider03_mo" src="img/slider2_3_mo.webp" width="100%" height="816" alt=" ">
+                </div>
+                <!-- 세번째 화면 -->
+                <!-- 네번째 화면 ------------------------------------>
+                <div class="carousel-item">
+                    <img id="slider04_pc" src="img/slider2_4_pc.webp" width="100%" height="auto" alt=" ">
+                    <img id="slider04_mo" src="img/slider2_4_mo.webp" width="100%" height="816" alt=" ">
+                </div>
+                <!-- 네번재 화면 -->
+            </div>
+
+            <!-- Left and right controls -->
+
+            <a class="carousel-control-prev" href="#slider2" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#slider2" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+    </div>
+    <!-- 모바일&IT (캐러셀) -->
+
+    <!-- 하단 스토리(pc) ------------------------------------------------------>
+    <div id="story">
+        <div id="story-pc" class="container ">
+
+            <div class="row align-items-center">
+                <div class="col-sm-3">
+                    <h2 class="text-center" style="font-weight: bold;">스토리</h2>
+                    <br>
+                    <p>당신의 삶을 특별하게 해줄 새로운 아이디어<br>
+                        스마트하게 사는 새로운 방법을 알아보세요.
+                    </p>
+                    <div class="btn btn-dark">더 알아보기</div>
+                </div>
+                <div class="col-sm-6">
+                    <img src="img/pic5.webp" width="100%" alt="">
+                </div>
+                <div class="col-sm-3">
+                    <ol>BTS가 촬영장에서 휴식을 즐기는 방법</ol>
+                    <ol>삼성 X 톰브라운, 단 하나뿐인 룩을 완성한다</ol>
+                    <ol>초고화질 시대를 향한 거대한 도약</ol>
+                </div>
+            </div>
+        </div>
+        <!-- 스토리 모바일버전 ------------------------------------------->
+        <div id="story-mo" class="container">
+            <div class="row-mo">
+                <h2>스토리</h2><br>
+                <h4>BTS가 촬영장에서 휴식을 즐기는 방법</h4>
+                <img src="img/pic5.webp" width="100%" alt="">
+                <div class="btn btn-dark">더 알아보기</div>
+            </div>
+        </div>
+    </div>
+    <!-- 스토리 모바일버전 -->
+
+    <!-- 하단 스토리 -->
+
+    <!-- 삼성디지털플라자 위치 ---------------------------------------------------->
+    <div class="container " id="map">
+        <h3 class="text-center" style="font-weight: bold; margin-top: 30px;">매장 위치</h3>
+        <div class="container-fluid" style="margin-top: 30px;">
+            <div id="googleMap" style="width: 100%; height: 500px;"></div>
+            <!-- Add Google Maps -->
+            <script src="http://maps.googleapis.com/maps/api/js"></script>
+            <script>
+                var myCenter = new google.maps.LatLng(37.546353, 126.972171);
+                var myCenter2 = new google.maps.LatLng(37.522682, 127.038860);
+                var myCenter3 = new google.maps.LatLng(37.557620, 126.923981);
+                var myCenter4 = new google.maps.LatLng(37.530535, 126.863505);
+                var myCenter5 = new google.maps.LatLng(37.507135, 127.117614);
+
+                function initialize() {
+                    var mapProp = {
+                        // center로 지도의 중심을 잡음
+                        center: myCenter,
+                        zoom: 12,
+                        scrollwheel: true,
+                        draggable: true,
+                        mapTypeId: google.maps.MapTypeId.ROADMAP
+                    };
+
+                    var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+
+                    var marker = new google.maps.Marker({
+                        position: myCenter,
+                    });
+
+                    var marker2 = new google.maps.Marker({
+                        position: myCenter2,
+                    });
+
+                    var marker3 = new google.maps.Marker({
+                        position: myCenter3,
+                    });
+                    var marker4 = new google.maps.Marker({
+                        position: myCenter4,
+                    });
+                    var marker5 = new google.maps.Marker({
+                        position: myCenter5,
+                    });
+
+                    marker.setMap(map);
+                    marker2.setMap(map);
+                    marker3.setMap(map);
+                    marker4.setMap(map);
+                    marker5.setMap(map);
+
+                    var content = "용산점<br><a href='tel:1544-1122'>1544-1122</a>";
+                    var infowindow = new google.maps.InfoWindow({
+                        content: content
+                    });
+
+                    infowindow.open(map, marker);
+
+                    var content2 = "강남본점<br><a href='tel:1544-1122'>1544-1122</a>";
+                    var infowindow2 = new google.maps.InfoWindow({
+                        content: content2
+                    });
+
+                    infowindow2.open(map, marker2);
+
+                    var content3 = "홍대점<br><a href='tel:1544-1122'>1544-1122</a>";
+                    var infowindow3 = new google.maps.InfoWindow({
+                        content: content3
+                    });
+                    infowindow3.open(map, marker3);
+
+                    var content4 = "목동점<br><a href='tel:1544-1122'>1544-1122</a>";
+                    var infowindow4 = new google.maps.InfoWindow({
+                        content: content4
+                    });
+                    infowindow4.open(map, marker4);
+
+                    var content5 = "송파점<br><a href='tel:1544-1122'>1544-1122</a>";
+                    var infowindow5 = new google.maps.InfoWindow({
+                        content: content5
+                    });
+                    infowindow5.open(map, marker5);
+                }
+
+                google.maps.event.addDomListener(window, 'load', initialize);
+            </script>
+        </div>
+    </div>
+    <!-- 삼성디지털플라자 위치 -->
+
+    <!-- 게시판 -------------------------------------------------->
+    <div class="container" id="board" style="margin-top: 50px;">
+        <h3 class="text-center">BOARD</h3>
+        <iframe id="iframe1" src="http://devjy.dothome.co.kr/g5/bbs/board.php?bo_table=board01" width="100%"
+            onload="autoResize(this)" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+    </div>
+    <!-- 게시판 -->
+
+    <!-- sub menu(PC)------------------------------------------------>
+    <div class="container-fluid sub">
+        <div class="row">
+            <div class="col-sm-2">
+            </div>
+            <div class="col-sm-3 ">
+                <h4 class="submenu">제품</h4>
+                <div class="row">
+                    <div class="col-sm-6" style="float: left;">
+                        <ul id="color">
+                            <li><a href="#">스마트폰</a></li>
+                            <li><a href="#">태블릿</a></li>
+                            <li><a href="#">웨어러블</a></li>
+                            <li><a href="#">모바일 액세서리</a></li>
+                            <li><a href="#">TV</a></li>
+                            <li><a href="#">Lifestyle TV</a></li>
+                            <li><a href="#">BESPOKE</a></li>
+                            <li><a href="#">삼성 오디오</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6">
+                        <ul id="color">
+                            <li><a href=" #">냉장고</a></li>
+                            <li><a href="#">에어컨</a></li>
+                            <li><a href="#">세탁기</a></li>
+                            <li><a href="#">건조기</a></li>
+                            <li><a href="#">에어드레서</a></li>
+                            <li><a href="#">청소기</a></li>
+                            <li><a href="#">노트북</a></li>
+                            <li><a href="#">데스크탑</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2 subline">
+                <h4 class="submenu">고객문의</h4>
+                <ul id="color">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">이메일 상담</a></li>
+                    <li><a href="#">매장 찾기</a></li>
+                    <li><a href="#">서비스센터 찾기</a></li>
+                    <li><a href="#">디지털프라자 아카데미</a></li>
+                    <li><a href="#">비즈니스 협력제안</a></li>
+                    <li><a href="#">MD 비즈니스 협력제안</a></li>
+                </ul>
+
+            </div>
+            <div class="col-sm-2 subline">
+                <h4 class="submenu">부가정보</h4>
+                <ul id="color">
+                    <li><a href="#">삼성 디지털프라자</a></li>
+                    <li><a href="#">데이코</a></li>
+                    <li><a href="#">뉴스룸</a></li>
+                    <li><a href="#">디자인 삼성</a></li>
+                    <li><a href="#">삼성전자 사회공헌</a></li>
+                    <li><a href="#">구매안전서비스</a></li>
+                    <li><a href="#">폐카트리지 회수신청</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-2 subline">
+                <h4 class="submenu">기업정보</h4>
+                <ul id="color">
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">투자자 정보</a></li>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">제품 접근성</a></li>
+                    <li><a href="#">삼성멤버스 커뮤니티</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-1">
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- sub menu(PC) -->
+
+    <!-- sub menu(mobile) -------------------------------------------->
+    <div id="subMenuMo" class="container-fluid">
+        <div class="container">
+            <div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
+
+                <!-- Accordion card -->
+                <div class="card ">
+
+                    <!-- Card header -->
+                    <div class="card-header" role="tab" id="headingOne1">
+                        <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne1" aria-expanded="true"
+                            aria-controls="collapseOne1">
+                            <h5 class="mb-0">
+                                제품소개 <i class="fas fa-angle-down rotate-icon"></i>
+                            </h5>
+                        </a>
+                    </div>
+
+                    <!-- Card body -->
+                    <div id="collapseOne1" class="collapse show" role="tabpanel" aria-labelledby="headingOne1"
+                        data-parent="#accordionEx">
+                        <div class="card-body">
+                            <ul>
+                                <li><a href="#" style="color: black;">스마트폰</a></li>
+                                <li><a href="#" style="color: black;">태블릿</a></li>
+                                <li><a href="#" style="color: black;">웨어러블</a></li>
+                                <li><a href="#" style="color: black;">모바일 액세서리</a></li>
+                                <li><a href="#" style="color: black;">TV</a></li>
+                                <li><a href="#" style="color: black;">Lifestyle TV</a></li>
+                                <li><a href="#" style="color: black;">BESPOKE</a></li>
+                                <li><a href="#" style="color: black;">삼성 오디오</a></li>
+                                <li><a href="#" style="color: black;">냉장고</a></li>
+                                <li><a href="#" style="color: black;">에어컨</a></li>
+                                <li><a href="#" style="color: black;">세탁기</a></li>
+                                <li><a href="#" style="color: black;">건조기</a></li>
+                                <li><a href="#" style="color: black;">에어드레서</a></li>
+                                <li><a href="#" style="color: black;">청소기</a></li>
+                                <li><a href="#" style="color: black;">노트북</a></li>
+                                <li><a href="#" style="color: black;">데스크탑</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="card">
+
+                    <!-- Card header -->
+                    <div class="card-header" role="tab" id="headingTwo2">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseTwo2"
+                            aria-expanded="false" aria-controls="collapseTwo2">
+                            <h5 class="mb-0">
+                                고객문의 <i class="fas fa-angle-down rotate-icon"></i>
+                            </h5>
+                        </a>
+                    </div>
+
+                    <!-- Card body -->
+                    <div id="collapseTwo2" class="collapse" role="tabpanel" aria-labelledby="headingTwo2"
+                        data-parent="#accordionEx">
+                        <div class="card-body">
+                            <ul>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">이메일 상담</a></li>
+                                <li><a href="#">매장 찾기</a></li>
+                                <li><a href="#">서비스센터 찾기</a></li>
+                                <li><a href="#">디지털프라자 아카데미</a></li>
+                                <li><a href="#">비즈니스 협력제안</a></li>
+                                <li><a href="#">MD 비즈니스 협력제안</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="card">
+
+                    <!-- Card header -->
+                    <div class="card-header" role="tab" id="headingThree3">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseThree3"
+                            aria-expanded="false" aria-controls="collapseThree3">
+                            <h5 class="mb-0">
+                                부가정보 <i class="fas fa-angle-down rotate-icon"></i>
+                            </h5>
+                        </a>
+                    </div>
+
+                    <!-- Card body -->
+                    <div id="collapseThree3" class="collapse" role="tabpanel" aria-labelledby="headingThree3"
+                        data-parent="#accordionEx">
+                        <div class="card-body">
+                            <ul>
+                                <li><a href="#">삼성 디지털프라자</a></li>
+                                <li><a href="#">데이코</a></li>
+                                <li><a href="#">뉴스룸</a></li>
+                                <li><a href="#">디자인 삼성</a></li>
+                                <li><a href="#">삼성전자 사회공헌</a></li>
+                                <li><a href="#">구매안전서비스</a></li>
+                                <li><a href="#">폐카트리지 회수신청</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="card">
+
+                    <!-- Card header -->
+                    <div class="card-header" role="tab" id="headingThree3">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseThree4"
+                            aria-expanded="false" aria-controls="collapseThree4">
+                            <h5 class="mb-0">
+                                기업정보 <i class="fas fa-angle-down rotate-icon"></i>
+                            </h5>
+                        </a>
+                    </div>
+
+                    <!-- Card body -->
+                    <div id="collapseThree4" class="collapse" role="tabpanel" aria-labelledby="headingThree3"
+                        data-parent="#accordionEx">
+                        <div class="card-body">
+                            <ul>
+                                <li><a href="#">회사소개</a></li>
+                                <li><a href="#">투자자 정보</a></li>
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">제품 접근성</a></li>
+                                <li><a href="#">삼성멤버스 커뮤니티</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- sub menu(mobile) -->
+
+    <!-- footer ----------------------------------------------------->
+    <div class="container-fluid footer">
+        <div class="row" style="margin-top: 30px;">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-7" style="font-size: 10px;">
+                Copyright © 1995-2020 SAMSUNG All Rights Reserved.<br>
+                경기도 수원시 영통구 삼성로 129 (매탄동) 삼성전자주식회사 대표이사 김기남 사업자등록번호 124-81-00998 사업자 정보확인 통신판매업 신고:
+                2000-경기수원-0515<br>
+                호스팅서비스사업자 : 삼성에스디에스(주)<br>
+                대표번호: 02-2255-0114 팩스: 02-2255-0117 제품/서비스/멤버십: 1588-3366 구매문의: 1588-6084<br>
+                삼성전자주식회사는 통신판매중개자로서 통신판매의 당사자가 아니며, 개별 판매자가 등록한 거래정보 및 거래에 대하여 책임을 지지 않습니다. 본 사이트의 콘텐츠는 저작권법의 보호를
+                받는바,
+                무단 전재, 복사, 배포 등을 금합니다.
+            </div>
+            <div class="col-sm-3">
+                <img src="img/icon_WA.webp" alt="WA">
+                <img src="img/icon-epri.webp" alt="epri">
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

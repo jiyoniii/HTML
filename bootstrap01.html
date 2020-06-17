@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <title>Bootstrap</title>
+
+</head>
+
+<body>
+    <!-- container와 container-fluid 비교 -->
+    <div class="container-fluid" style="background:  green;">
+        <h1>container-fluid</h1>
+        <p>양옆으로 여백이 없는 형태</p>
+    </div>
+    <div class="container" style="background:  yellowgreen;">
+        <h1>container</h1>
+        <p>양옆으로 여백이 있는 형태</p>
+    </div>
+    <div class="container-fluid" style="background:  olive;">
+        <div class="container">
+            <h1>container-fluid + container</h1>
+            <p>container, container-fluid 혼합.</p>
+        </div>
+    </div>
+    <div class="container">
+        <!-- 네칸으로 나누기(총 12칸을 기준으로 나누면 됨) -->
+        <div class="row">
+            <div class="col-sm-3" style="height: 300px; background: indianred;">.col-sm-3</div>
+            <div class="col-sm-3" style="height: 300px;background: khaki;">.col-sm-3</div>
+            <div class="col-sm-3" style="height: 300px;background: lightskyblue;">.col-sm-3</div>
+            <div class="col-sm-3" style="height: 300px;background: lightsalmon;">.col-sm-3</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6" style="height: 300px;background: rgb(44, 187, 99);">.col-sm-6</div>
+            <div class="col-sm-6" style="height: 300px;background: rgb(184, 223, 187);">.col-sm-6</div>
+        </div>
+        <div class="container">
+            <h1>Secondary Text-부제목 만들기</h1>
+            <p>The small element is used to create a lighter, secondary text in any heading:</p>
+            <h1>h1 heading <small>secondary text</small></h1>
+            <h2>h2 heading <small>secondary text</small></h2>
+            <h3>h3 heading <small>secondary text</small></h3>
+            <h4>h4 heading <small>secondary text</small></h4>
+            <h5>h5 heading <small>secondary text</small></h5>
+            <h6>h6 heading <small>secondary text</small></h6>
+        </div>
+        <!--<pre> -->
+        <div class="container">
+            <h1>Multiple Code Lines</h1>
+            <p>For multiple lines of code, use the pre element:</p>
+            <!-- 텍스트 줄바꿈이 편리, 들여쓰기가 아래 작성한 대로 그대로 나타남. 본문 작성 시 유용 -->
+            <pre>
+        Text in a pre element
+        is displayed in a fixed-width
+        font, and it preserves
+        both      spaces and
+        line breaks.
+        </pre>
+        </div>
+        <!-- 글에 색 입히기 -->
+        <div>
+            <p class="text-muted">This text is muted.</p>
+            <p class="text-success">This text indicates success.</p>
+            <p class="text-primary">This text is important.</p>
+            <p class="text-warning">This text represents a warning.</p>
+            <p class="text-info">This text represents some information.</p>
+            <p class="text-secondary">Secondary text.</p>
+            <p class="text-danger">This text represents danger.</p>
+            <p class="text-body">Default body color (often black).</p>
+            <p class="text-dark">This text is dark grey.</p>
+            <p class="text-white">This text is white (on white background).</p>
+            <p class="text-light">This text is light grey (on white background).</p>
+            <p class="bg-primary text-white">This text is important.</p>
+            <p class="bg-success text-white">This text indicates success.</p>
+            <p class="bg-info text-white">This text represents some information.</p>
+            <p class="bg-warning text-white">This text represents a warning.</p>
+            <p class="bg-danger text-white">This text represents danger.</p>
+            <p class="bg-secondary text-white">Secondary background color.</p>
+            <p class="bg-dark text-white">Dark grey background color.</p>
+            <p class="bg-light text-dark">Light grey background color.</p>
+        </div>
+
+        <!-- 테이블 만들기 -->
+        <div class="container">
+            <!-- 컨테이너에 넣으면 양쪽 여백이 생김 -->
+            <table class="table table-bordered table-hover">
+                <tr>
+                    <th>과정명</th>
+                    <th>설명</th>
+                </tr>
+                <tr>
+                    <td>응용sw</td>
+                    <td>응용sw 개발자과정</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="container">
+            <p>이미지모서리 둥근효과 주기</p>
+            <img src="img/mountain.jpg" class="rounded">
+        </div>
+        <div class="container">
+            <p>image img-thumbnail</p>
+            <img src="img/mountain.jpg" class="img-thumbnail">
+        </div>
+        <!-- jumbotron -->
+        <div class="jumbotron">
+            <h1>Bootstrap Tutorial</h1>
+            <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile-first
+                projects on
+                the web.</p>
+        </div>
+        <!-- closing alert -->
+        <div class="alert alert-success alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>Success!</strong> This alert box could indicate a successful or positive action.
+        </div>
+        <!-- alert가 스르륵 사라지게 하는 효과 "fade show" -->
+        <div class="alert alert-success alert-dismissible fade show">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>Success!</strong> This alert box could indicate a successful or positive action.
+        </div>
+
+        <!-- 버튼 -->
+        <div>
+            <a href="#" class="btn btn-success" role="button">Link Button</a>
+            <button type="button" class="btn btn-info">Button</button>
+            <input type="button" class="btn btn-info" value="Input Button">
+            <input type="submit" class="btn btn-info" value="Submit Button">
+        </div>
+        <!-- 버튼 그룹 -->
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary">Apple</button>
+            <button type="button" class="btn btn-primary">Samsung</button>
+            <button type="button" class="btn btn-primary">Sony</button>
+        </div>
+        <!-- 하단 페이지 (active는 현재 페이지를 의미함) -->
+        <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item "><a class="page-link" href="#">2</a></li>
+            <li class="page-item active"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+        <!-- 게시판에 주로 사용하는 알림뱃지 ------------------------------>
+        <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Inbox
+                <span class="badge badge-primary badge-pill">12</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Ads
+                <span class="badge badge-primary badge-pill">50</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Junk
+                <span class="badge badge-primary badge-pill">99</span>
+            </li>
+        </ul>
+        <!-- 카드(bootstrap3 까지는 panel로 사용됐으나 4부터 카드로 변경됨) -->
+        <div class="container">
+            <h2>Card Image</h2>
+            <p>Image at the top (card-img-top):</p>
+            <div class="card" style="width:300px">
+                <img class="card-img-top" src="img/html5.png" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">John Doe</h4>
+                    <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+                    <a href="#" class="btn btn-primary">See Profile</a>
+                </div>
+            </div>
+            <br>
+
+            <p>Image at the bottom (card-img-bottom):</p>
+            <div class="card" style="width:400px">
+                <div class="card-body">
+                    <h4 class="card-title">Jane Doe</h4>
+                    <p class="card-text">Some example text some example text. Jane Doe is an architect and engineer</p>
+                    <a href="#" class="btn btn-primary">See Profile</a>
+                </div>
+                <img class="card-img-bottom" src="img/mountain.jpg" alt="Card image" style="width:100%">
+            </div>
+        </div>
+        <!-- drop down버튼 -------------------------------------->
+        <button class="btn btn-primary" data-toggle="collapse" data-target="#demo">Collapsible</button>
+        <div id="demo" class="collapse">
+            Lorem ipsum dolor text....
+            Lorem ipsum dolor text....
+            Lorem ipsum dolor text....
+        </div>
+        <p>-----------------tab--------------
+            <!-- tab --------------------------------------------->
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#menu1">Menu 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#menu2">Menu 2</a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane container active" id="home">home</div>
+                <div class="tab-pane container fade" id="menu1">menu1</div>
+                <div class="tab-pane container fade" id="menu2">menu2</div>
+            </div>
+        </p>
+        <!-- 로그인form  -->
+        <p> ------------로그인form-------------
+            <form action="login.jsp" method="post">
+                <label>id</label>
+                <input class="form-control form-group" type="text" name="id"><br>
+                <label>pw</label>
+                <input class="form-control form-group" type="password" name="pw"><br>
+                <input class="btn btn-primary form-group" type="submit" value="login">
+            </form>
+        </p>
+
+        <!-- modal-------------------------------------------- -->
+        <!-- Button to Open the Modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+            Open modal
+        </button>
+
+        <!-- The Modal -->
+        <!-- class에 fade추가 시 animation 적용이 됨. -->
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Modal Heading</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        Modal body..
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>

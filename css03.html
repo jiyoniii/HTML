@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <style>
+        #box1 {
+            width: 100px;
+            height: 100px;
+            background-color: darkkhaki;
+            margin-left: 300px;
+            margin-top: 110px;
+
+            padding-left: 50px;
+            padding-top: 20px;
+        }
+
+        #box2 {
+            width: 100px;
+            height: 100px;
+            background-color: darksalmon;
+            margin-top: 110px;
+        }
+
+        /* unvisited link */
+        a:link {
+            color: red;
+            text-decoration: none;
+        }
+
+        /* visited link */
+        a:visited {
+            color: green;
+        }
+
+        /* mouse over link */
+        a:hover {
+            color: hotpink;
+        }
+
+        /* selected link */
+        a:active {
+            color: blue;
+        }
+
+        span a:link,
+        a:visited {
+            background-color: #f44336;
+            color: white;
+            padding: 14px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        span a:hover,
+        a:active {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box1"> box1</div>
+    <div id="box2"> box2</div>
+
+    <a href="http://www.naver.com">네이버</a>
+
+    <br>
+
+    <span>
+        <a href="http://www.google.com">Google</a>
+    </span>
+
+
+</body>
+
+</html>

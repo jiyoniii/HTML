@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포스터 이미지</title>
+    <!-- 아래세줄 넣어야 jquery mobile 사용가능 -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <!-- 모바일 웹페이지 만들기 위한 jquery -->
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <!-- Fotorama from CDNJS, 19 KB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+    <style>
+        /* footer */
+        .footer {
+            background-color: #E9E9E9 !important;
+            text-shadow: none !important;
+            color: white !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div data-role="page">
+        <div data-role="header">
+            <a href="index.html" rel="external"
+                class="ui-btn ui-shadow ui-corner-all ui-icon-home ui-btn-icon-notext">notext</a>
+
+            <h3>영화이미지</h3>
+
+        </div>
+        <div data-role="content">
+            <!-- 영화 이미지 슬라이더는 fotorama 사이트에서 소스 사용 -->
+            <!-- 이미지 사이즈를 화면에 가득 차게 만들기 위해선 data-width="100%" -->
+            <!-- 이미지가 계속 돌아가기 위해선 data-loop="true" -->
+            <div class="fotorama" data-width="100%" data-loop="true" data-nav="thumbs" data-autoplay="3000">
+                <img src="img/pic01.jpg">
+                <img src="img/pic02.jpg">
+                <img src="img/pic03.jpg">
+                <img src="img/pic04.jpg">
+                <img src="img/pic05.jpg">
+                <img src="img/pic06.jpg">
+                <img src="img/pic07.jpg">
+                <img src="img/pic08.jpg">
+                <img src="img/pic09.jpg">
+            </div>
+        </div>
+        <div data-role="footer">
+            <h3>&copy;JY All right reserved.</h3>
+        </div>
+    </div>
+</body>
+
+</html>

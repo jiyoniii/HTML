@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예고편</title>
+    <!-- 아래세줄 넣어야 jquery mobile 사용가능 -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <!-- 모바일 웹페이지 만들기 위한 jquery -->
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <!-- Youtube 영상 반응형으로 만들기(사이즈 조절) -->
+    <script type="text/javascript">
+        $(window).resize(function () { resizeYoutube(); });
+        $(function () { resizeYoutube(); });
+        function resizeYoutube() { $("iframe").each(function () { if (/^https?:\/\/www.youtube.com\/embed\//g.test($(this).attr("src"))) { $(this).css("width", "100%"); $(this).css("height", Math.ceil(parseInt($(this).css("width")) * 480 / 854) + "px"); } }); }
+    </script>
+    <style>
+        /* footer */
+        .footer {
+            background-color: #E9E9E9 !important;
+            text-shadow: none !important;
+            color: white !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div data-role="page">
+        <div data-role="header">
+            <a href="index.html" rel="external"
+                class="ui-btn ui-shadow ui-corner-all ui-icon-home ui-btn-icon-notext">notext</a>
+
+            <h3>상영관위치</h3>
+
+        </div>
+        <div data-role="content">
+            <h3>현재 상영관</h3>
+            <p style="font-weight: 700;">메가박스 월드컵경기장점</p>
+            <p style="font-size: 15px;">
+                도로명 주소 : 서울특별시 마포구 월드컵로 240 (성산동, 월드컵주경기장)
+            </p>
+
+            <!-- 카카오 맵---------------------------------------------------- -->
+            <!-- appkey는 개별로 발급받아 사용 -->
+            <div id="kakaomap" style="width: 100%;height: 500px;"></div>
+            <script type="text/javascript"
+                src="http://dapi.kakao.com/v2/maps/sdk.js?appkey=86af88cc3bb074a830029eeb3cb2ae1d"></script>
+            <script>
+                $(document).ready(function () {
+                    var mapContainer = document.getElementById('kakaomap'), // 지도를 표시할 div 
+                        //위도 경도는 구글맵에서 긁어와야함  
+                        mapOption = {
+                            center: new daum.maps.LatLng(37.568285, 126.897833), // 지도의 중심좌표
+                            level: 3 // 지도의 확대 레벨
+                        };
+
+                    var map = new daum.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+                    // 마커가 표시될 위치입니다 
+                    var markerPosition = new daum.maps.LatLng(37.568285, 126.897833);
+
+                    // 마커를 생성합니다
+                    var marker = new daum.maps.Marker({
+                        position: markerPosition
+                    });
+
+                    // 마커가 지도 위에 표시되도록 설정합니다
+                    marker.setMap(map);
+
+                });
+
+
+            </script>
+            <!-- 카카오맵.끝.-->
+
+        </div>
+        <div data-role="footer">
+            <h3>&copy;JY All right reserved.</h3>
+        </div>
+    </div>
+</body>
+
+</html>

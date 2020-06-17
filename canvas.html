@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <style>
+        #myCanvas {
+            border: 1px solid black;
+
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="500" height="500"></canvas>
+    <script>
+        var c = document.getElementById("myCanvas");
+        var painter = c.getContext("2d");
+
+        //canvas
+        painter.moveTo(0, 0);
+        painter.lineTo(500, 500);
+        painter.stroke();
+
+        //원그리기
+        painter.beginPath();
+        //1,2번째는 가로세로 위치, 세번째는 반지름(?)
+        painter.arc(300, 300, 100, 0, 2 * Math.PI);
+        painter.stroke();
+
+        painter.beginPath();
+        //1,2번째는 가로세로 위치, 세번째는 반지름(?)
+        painter.arc(200, 300, 80, 0, 2 * Math.PI);
+        painter.stroke();
+
+        //글자
+        painter.font = "50px Arial";
+        // painter.fillText = "red";
+        painter.textAlign = "center";
+        painter.fillText("Hello", 250, 200);
+
+        //채워진 사각형
+        painter.fillstyle = "red";
+        painter.fillRect(10, 410, 150, 80);
+
+
+        //jQuery에서 drawImage() 사용하기
+        $(document).ready(function () {
+
+            var canvas = document.getElementById("myCanvas");
+            var ctx = canvas.getContext("2d");
+
+            var img = new Image();
+            img.onload = function () {
+                ctx.drawImage(img, 250, 0);
+            }
+            img.src = "https://dbscthumb-phinf.pstatic.net/2765_000_20/20180913194327944_A7SIE118Z.jpg/1038.jpg?type=m250&wm=N";
+
+        });
+    </script>
+</body>
+
+</html>

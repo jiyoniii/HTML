@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!--description태그 사용해 페이지설명이 가능.-->
+    <meta name="description" content="Free Web tutorials">
+    <!-- viewport는 모바일디바이스의 가로사이즈에 맞게 폰트, 이미지 조정해주는 기능-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--keyword를 걸어 검색될 확률을 높임-->
+    <meta name="keyword" content="html5, CSS3, Javascript">
+    <!--refresh는 content에 있는 숫자는 초를 의미하며, 페이지 이동&refresh가능-->
+
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>안녕하세요?</h1>
+    <div style=color:chocolate;font-size: 30px;font-weight: bold;>안녕하세요?</div>
+    <p style="color :rgb(26, 194, 194);">
+        <b>HTML은 웹표준언어입니다. <br></b>
+        <strong> HyperText Markup Language의 약자입니다.</strong>
+    </p>
+    <!-- 웹 표준언어 HTML 설명------------------------------------------------>
+    <p>
+        HTML은 W3C에서 표준을 지정합니다.<br> <button>등록</button>
+        <a href="http://w3.org ">W3C로 이동하기</a>
+        <br>
+        <img src="img/mountain.jpg" alt="MOUNTAIN" width="100" height="80">
+        <br>
+        <img src="img/mountain.jpg" alt="MOUNTAIN" width="80">
+        <a href="about/contact/email.html">상대경로 표기email</a>
+        <a href="/about/contact/email.html">절대경로 표기email</a>
+    </p>
+    <!-- 웹 표준언어 HTML 설명-->
+    <p>
+        <ul>
+            <!--ul>li*3-->
+            <li>ul</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+        </ul>
+        <ol>
+            <li>ol</li>
+            <li>Front End</li>
+            <li>Back end</li>
+            <li>Full stack</li>
+            <em>emem</em>
+            <i>iiii</i>
+        </ol>
+
+    </p>
+
+    <p>
+        <b>HTML5</b>
+        <del>취소선</del>
+        <ins>밑줄밑줄</ins><br>
+        아래로아래로<sub>subsub</sub><br>
+        위로위로<sup>super</sup>
+
+    </p>
+    <p>
+        <blockquote>들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기<br>
+            들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기들여쓰기<br>
+            들여쓰기들여쓰기들여쓰기들여쓰기</blockquote>
+    </p>
+    <!--font 색 넣기, font background 색 넣기----------------------->
+    <p>
+        <h2 style="color:#aeff00;">라임색라임라임</h2>
+        <h2 style="color:#741515;">글자에 색넣기</h2>
+        <h2 style="color:#A075FF;">글자에 색넣기2</h2>
+        <h3 style="background-color:rgb(255, 99, 71);">...</h3>
+        <h3 style="background-color:#ff6347;">...</h3>
+        <h3 style="background-color:hsl(9, 100%, 64%);">...</h3>
+        <h3 style="background-color:rgba(255, 99, 71, 0.5);">...</h3>
+        <h3 style="background-color:hsla(9, 100%, 64%, 0.5);">...</h3>
+    </p>
+    <!--font 색 넣기, background 색 넣기-->
+    <!--링크 넣기--------------------------------->
+    <p>
+        <a href="http://www.naver.com">네이버 현재 창에서 열기</a>
+        <a href="http://www.naver.com" target="_blank">네이버 새창에서 열기</a>
+    </p>
+    <!--링크 넣기-->
+
+    <!--링크 이미지아이콘 넣는 방법--------------------------------->
+    <p>
+        <a href="http://www.naver.com"><img src="img/html5.png"></a>
+    </p>
+    <!--이미지아이콘 넣는 방법-->
+
+    <!--테이블---------------------------------------------------->
+    <p><strong> ----테이블 만들기----</strong>
+        <table border="1" width="50%">
+            <!-- 반응형 웹페이지 만들 때는 width를 %로 표시-->
+            <tr>
+                <th>과정(th:가운데정렬)</th>
+                <th>설명</th>
+            </tr>
+            <tr>
+                <td>Java과정(왼쪽정렬:td)</td>
+                <td>Java, 프론트엔드, 백엔드, 안드로이드 ...</td>
+            </tr>
+            <tr>
+                <td>Web Publisher</td>
+                <td height="200" valign="top">웹 퍼블리셔, HTML5, CSS3, Javascript, JQuery</td>
+            </tr>
+        </table>
+
+        <table border="1" width="50%">
+            <tr>
+                <td colspan="3">1</td>
+
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+        </table>
+    </p>
+
+    <br>
+    <table border="1" width="50%">
+        <tr>
+            <td rowspan="2">1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+    </table>
+    <br>
+    <table border="1" width="50%">
+        <tr>
+            <td colspan="2">1</td>
+
+        </tr>
+        <tr>
+            <td rowspan="2">2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

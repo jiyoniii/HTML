@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nav</title>
+    <style>
+        #nav {
+            width: 300px;
+            height: 50px;
+            line-height: 50px;
+            list-style-type: none;
+            background-color: rgb(86, 83, 90);
+        }
+
+        #nav li {
+            float: left;
+        }
+
+        #nav li a {
+            padding: 10px;
+            text-decoration: none;
+        }
+
+        #nav li a {
+            color: grey;
+        }
+
+        #nav li a:hover {
+            color: black;
+            background-color: rgb(191, 192, 187);
+        }
+
+        .active {
+            color: white;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="nav">
+        <li><a href="#home"> Home</a></li>
+        <li><a class="active" href="#news"> News</a></li>
+        <li><a href="#contact"> Contact</a></li>
+        <li><a href="#about"> About</a></li>
+    </ul>
+</body>
+
+</html>

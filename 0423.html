@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 15px solid white;
+            border-top: blue solid 15px;
+            border-radius: 50%;
+            animation: one 1s infinite linear;
+        }
+
+        @keyframes one {
+            0% {
+                border-top: blue solid 15px;
+            }
+
+            25% {
+                border-right: blue solid 15px;
+            }
+
+            50% {
+                border-bottom: blue solid 15px;
+            }
+
+            75% {
+                border-left: blue solid 15px;
+            }
+
+            100% {
+                border-top: blue solid 15px;
+            }
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            border: 15px solid white;
+            border-top: yellowgreen solid 15px;
+            border-radius: 50%;
+            animation: two 1s infinite linear;
+        }
+
+        @keyframes two {
+
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+
+        }
+    </style>
+</head>
+<!-- CSS를 사용해서 회전하는 로딩바 만들기.
+
+가. 박스를 만든다.
+나. 박스 윗쪽테두리만 색을 칠한다.
+다. 박스를 원으로 만듬
+라. 애니메이션을 이용해서 회전시킨다. -->
+
+<body>
+    <div class="box"></div>
+    <div class="box2"></div>
+</body>
+
+</html>
